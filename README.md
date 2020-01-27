@@ -1,6 +1,6 @@
 # CS 162 Intro to Comupter Science II
 
-This repository is an archive of all the programming assignments for CS 344 at Oregon State University taken winter quarter 2020, taught by Justin Goins.
+This repository is an archive of all the programming assignments for CS 162 at Oregon State University taken winter quarter 2018, taught by Rob Hess.
 
 ## Course Description
 
