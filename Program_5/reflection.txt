@@ -1,0 +1,81 @@
+Going into this program some of the assumptions I made were assumptions that I made were that the maze
+must be updated after each user move. The maze must recognize when the player is allowed to move up to the next level.
+The student will not be able to cross over walls. The maze will be made using vectors from information contained
+in a txt file. The player and TA’s are only allowed to move one space per turn and never in the same space.
+The maze will be copied over from the .txt file that is provided to us. The user must understand all directions,
+in which they proceed through the game as instructed in order to win. The maze will be composed of
+different characters for the user to differentiate from. The maze will be made by a character vector.
+If the command line argument is not enter there will be a seg fault, if the incorrect information is entered
+in the command line then the program will exit.
+
+My test plan consisted of these three cases, one in which was good, bad and edge cases. They are included below...
+
+Good Input Test Cases:
+
+User correctly inputting correct characters to play again.
+Having my (Game End Function) correctly determine when game is over.
+Correctly have (MazeLocation Functions) correctly determine all location of the maze.
+Correctly have MazePerson/MazePerson class utilize polymorphism for the other class.
+Introduce the game before the game is played.
+Correctly have a maze updated after each player move.
+Correctly use vector to create the maze from .txt file.
+Correctly exchange information between all classes.
+When user is prompted with a decision they input all correct data types.
+Correctly have program factored into interface, implementation, and application.
+
+Bad Input Test Cases:
+
+User incorrectly inputs the wrong characters to play again.
+Having my (Game End Function) incorrectly determine when game is over.
+The (MazeLocation Functions) incorrectly determine the locations of the maze.
+My maze class fails to have the desired characteristics for the game.
+Gameplay intro/rules are introduced after the game is played.
+If no information is shared through polymorphism implementation.
+If a vector is not allocated for the creation of the maze.
+When user is prompted with a decision they input incorrect data types.
+When selecting a from a vector, the selection is outside the boundaries of the vector.
+The game takes in the wrong command line argument for the file.
+
+Edge Input Test Cases:
+
+User inputs Yes or No when asked to play again instead of the character Y or N.
+Having my (End Game Function) end when the game is on the wrong level of maze.
+The user inputs “text of the desired selection”  instead of the actual number associated with the selection.
+The game has no checking for the command line argument.
+When using polymorphism it is not directly indicated by virtual.
+The game ends but not all of the game win parameters have been met.
+A file is mentioned in command line but spelled incorrectly.
+The user selects 7 with a vector the size of 7 (0-6).
+The user selects 0 with a vector the size of 7 (0-6).
+When the user accidentally chooses a direction that is on the edge of the maze.
+
+My testing went fairly well in which I absolved a few issues, one in which I was getting a double free.
+This was fixed by creating a copy constructor so the it would create a deep copy rather than a shallow copy of the 2D
+vector. Other than that I ran into pretty minor issues, mostly due to not getting the program completed fully.
+I had issues where I forgot to add the header files to the .cpps or other files that required the information from that
+particular class.
+
+The resources that I find to find the most useful is actually tutorial videos that cover the basics of the principles
+I am trying to instill within my program. I also find office hours to be quite helpful depending on the problems I have
+run into with my code. For this project in particular I didn't need much help besides trying to resolve the double free
+issue that I encountered. Since I am not the the greatest coder yet I find myself catching onto things a bit slower so I
+find Stack Overflow and other similar websites to be a bit confusing in which, I prefer to watch a video instead. I found
+Dr. Hess to be extremely intuitive and helpful in every question or concern I had for this course, so I was able to benefit
+greatly from all standpoints within this course. Although this program may not directly indicate this, I simply
+had personal matters take up most of my time and did what I could and went off the his guideline for how he based
+his points for this program.
+
+This assignment is worth 100 points total:
+
+10 points: your code is appropriately commented and uses consistent and appropriate style
+15 points: your REFLECTION.txt document thoughtfully explains your work on your project
+15 points: your program correctly reads maze levels from a maze configuration file and creates corresponding MazeLevel objects, including error checking on the input file
+10 points: the Wall and OpenSpace classes are correctly implemented and derive from the (correctly implemented) MazeLocation class
+10 points: the IntrepidStudent, TA, and Instructor classes are correctly implemented and derive from the (correctly implemented) MazePerson class
+10 points: objects of the IntrepidStudent, TA, and Instructor classes correctly move around the maze
+5 points: climbing a ladder brings the Intrepid Student to the next level in the maze
+5 points: the Intrepid Student picks up a Programming Skill when moving into a space containing one, while TAs do not affect Programming Skills
+5 points: if a TA enters a space adjacent to the Intrepid Student and the TA is not appeased, the level is reset, and the Intrepid Student starts from the beginning of the level after losing all Programming Skills
+5 points: demonstrating a Programming Skill appeases the TAs on the current level for 10 turns
+5 points: if the Intrepid Student reaches the Instructor and holds at least 3 Programming Skills, they are allowed to escape from the maze with a passing grade; otherwise they must repeat the entire maze from the beginning
+5 points: all dynamically allocated memory is correctly freed (no memory leaks)
