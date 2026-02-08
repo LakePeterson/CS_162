@@ -153,6 +153,8 @@ Card Hand::getRankCards(int userInput)
       return removeCard(i);
     }
   }
+
+  return Card();
 }
 
 /********************************************************************
@@ -172,6 +174,8 @@ int Hand::checkRankCards(int userInput)
       return cards[i].getRank();
     }
   }
+
+  return -1;
 }
 
 /********************************************************************

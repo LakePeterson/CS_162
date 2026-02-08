@@ -1,0 +1,25 @@
+# Compiled object files
+*.o
+
+# Compiled executables
+*.exe
+*.out
+
+# Program-specific binaries (Linux/macOS builds)
+Program_1/explore_econdata
+Program_2/goFishGame
+Program_3/playZooTycoon
+Program_4/playHuntTheWumpus
+Program_5/playMaze
+
+# macOS metadata
+.DS_Store
+
+# JetBrains IDE
+.idea/
+
+# Claude Code
+.claude/
+
+# Windows artifacts
+nul

@@ -114,6 +114,8 @@ void read_state_data(struct state* states, int numState, ifstream& file)
 struct county* allocate_counties(int n_counties)
 {
   struct county *cArray = new county[n_counties];
+
+  return cArray;
 }
 
 /********************************************************************

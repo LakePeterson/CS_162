@@ -726,4 +726,6 @@ bool Game::checkWin()
 
     return true;
   }
+
+  return false;
 }
